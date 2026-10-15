@@ -23,11 +23,18 @@ const t = useTranslations(currentLang);
 ---
 
 <Layout lang={currentLang}>
+  <!-- Semantic Breadcrumb Navigation for SEO & A11y -->
+  <nav aria-label="Breadcrumb" class="flex items-center justify-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-6">
+    <a href="/" class="hover:text-clonelink-indigo dark:hover:text-clonelink-emerald transition-colors font-medium">Home</a>
+    <span class="text-gray-300 dark:text-gray-600" aria-hidden="true">/</span>
+    <span class="text-gray-700 dark:text-gray-300 font-semibold" aria-current="page">{t.hero.title}</span>
+  </nav>
+
   <!-- Hero Section -->
-  <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+  <header class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
     <!-- Top Privacy & Speed Badge -->
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-clonelink-darkCard border border-indigo-200/60 dark:border-clonelink-emerald/30 text-clonelink-indigo dark:text-clonelink-emerald text-xs font-semibold tracking-wide mb-6 shadow-sm">
-      <span class="w-2 h-2 rounded-full bg-clonelink-emerald animate-pulse"></span>
+      <span class="w-2 h-2 rounded-full bg-clonelink-emerald animate-pulse" aria-hidden="true"></span>
       <span>{t.hero.badge}</span>
     </div>
 
@@ -43,7 +50,7 @@ const t = useTranslations(currentLang);
     <p class="mt-4 sm:mt-6 text-sm sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
       {t.hero.subtitle}
     </p>
-  </div>
+  </header>
 
   <!-- Interactive React Island for URL Parsing, Chained Commands & ZIP Downloader -->
   <CloneGenerator client:load dict={t} lang={currentLang} />

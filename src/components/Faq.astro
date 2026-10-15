@@ -18,20 +18,20 @@ const faqItems = [
 ];
 ---
 
-<section class="mt-20 sm:mt-28">
+<section id="faq-section" aria-labelledby="faq-heading" class="mt-20 sm:mt-28">
   <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-    <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+    <h2 id="faq-heading" class="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight">
       {t.faq.title}
     </h2>
   </div>
 
   <div class="max-w-3xl mx-auto space-y-4">
-    {faqItems.map((item, index) => (
+    {faqItems.map((item) => (
       <details class="group rounded-2xl bg-white dark:bg-clonelink-darkSurface border border-clonelink-lightBorder dark:border-clonelink-darkBorder p-5 sm:p-6 transition-all duration-200 open:shadow-clean-md">
         <summary class="flex items-center justify-between cursor-pointer list-none select-none font-bold text-sm sm:text-base text-gray-900 dark:text-white group-hover:text-clonelink-indigo dark:group-hover:text-clonelink-emerald transition-colors">
           <span>{item.q}</span>
           <span class="ml-4 flex-shrink-0 text-gray-400 group-hover:text-clonelink-indigo dark:group-hover:text-clonelink-emerald transition-transform duration-200 group-open:rotate-180">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </span>

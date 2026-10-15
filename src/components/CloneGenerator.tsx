@@ -216,7 +216,7 @@ export default function CloneGenerator({ dict, lang }: CloneGeneratorProps) {
         <div className="relative flex items-center">
           <div className="absolute left-4 text-gray-400 dark:text-gray-500 pointer-events-none flex items-center">
             {/* Git Branch / Link Icon */}
-            <svg className="w-5 h-5 text-clonelink-indigo dark:text-clonelink-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 text-clonelink-indigo dark:text-clonelink-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
             </svg>
           </div>
@@ -238,9 +238,10 @@ export default function CloneGenerator({ dict, lang }: CloneGeneratorProps) {
                 type="button"
                 onClick={() => setInputValue('')}
                 title={dict.input.clear}
+                aria-label={dict.input.clear}
                 className="p-1.5 sm:p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
               >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -249,9 +250,10 @@ export default function CloneGenerator({ dict, lang }: CloneGeneratorProps) {
               type="button"
               onClick={handlePasteFromClipboard}
               title={dict.input.paste}
+              aria-label={dict.input.paste}
               className="flex items-center gap-1 text-xs font-semibold px-2.5 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 transition-colors border border-gray-200 dark:border-gray-700"
             >
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
               </svg>
               <span className="hidden sm:inline">{dict.input.paste}</span>
@@ -702,7 +704,7 @@ function CommandCard({
       {/* Terminal Code Box */}
       <div className="relative rounded-lg bg-gray-900 text-gray-100 p-3 sm:p-3.5 font-mono text-xs sm:text-sm overflow-x-auto border border-gray-800 flex items-center justify-between gap-3 shadow-inner">
         <div className="flex items-center gap-2 min-w-0 flex-1">
-          <span className="text-clonelink-emerald font-bold select-none">$</span>
+          <span className="text-clonelink-emerald font-bold select-none" aria-hidden="true">$</span>
           <span className="break-all whitespace-pre-wrap select-all font-mono text-gray-100">
             {command}
           </span>
@@ -711,6 +713,8 @@ function CommandCard({
         {/* Copy Button (Inside Code box on desktop, full button on mobile) */}
         <button
           type="button"
+          aria-live="polite"
+          aria-label={isCopied ? copiedLabel : `${copyLabel}: ${command}`}
           onClick={(e) => {
             e.stopPropagation();
             onCopy();
@@ -723,14 +727,14 @@ function CommandCard({
         >
           {isCopied ? (
             <>
-              <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor">
+              <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               <span>{copiedLabel}</span>
             </>
           ) : (
             <>
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
               </svg>
               <span>{copyLabel}</span>
@@ -743,6 +747,8 @@ function CommandCard({
       <div className="mt-2 block sm:hidden">
         <button
           type="button"
+          aria-live="polite"
+          aria-label={isCopied ? copiedLabel : `${copyLabel} Command`}
           onClick={(e) => {
             e.stopPropagation();
             onCopy();

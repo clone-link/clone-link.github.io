@@ -1,0 +1,17 @@
+{
+  "name": "CloneLink | Smart Git Clone Command Generator & Subfolder Downloader",
+  "short_name": "CloneLink",
+  "description": "An ultra-minimal, 100% client-side developer utility for chained Git terminal commands and subfolder ZIP downloads.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090D16",
+  "theme_color": "#4F46E5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
