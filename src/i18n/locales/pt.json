@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "CloneLink | Gerador Inteligente de Comandos Git Clone e Baixador de Subpastas",
+    "description": "Gere comandos de terminal encadeados (clone + cd + VS Code/npm) e baixe subpastas do GitHub em ZIP diretamente no seu navegador. 100% do lado do cliente.",
+    "keywords": "gerador de comando git clone, baixar subpasta github online, ferramenta clonar github, git clone e cd, sparse checkout github"
+  },
+  "nav": {
+    "support": "Apoiar Desenvolvedor",
+    "supportShort": "Apoiar",
+    "supportTooltip": "Pague-me um café no Buy Me a Coffee",
+    "themeLight": "Mudar para Modo Escuro",
+    "themeDark": "Mudar para Modo Claro",
+    "selectLanguage": "Selecionar Idioma"
+  },
+  "hero": {
+    "badge": "100% Lado do Cliente • Zero Dependências de Servidor • Privacidade Total",
+    "title": "Gerador Inteligente de Git Clone",
+    "titleHighlight": "e Baixador de Subpastas",
+    "subtitle": "Cole qualquer URL do GitHub, link para subpasta ou atalho de organização para gerar comandos encadeados instantaneamente e baixar pastas em ZIP."
+  },
+  "input": {
+    "label": "URL do Repositório ou Pasta do GitHub",
+    "placeholder": "Cole a URL do GitHub, link da subpasta ou atalho (ex: facebook/react, vercel/next.js/tree/canary/examples)...",
+    "clear": "Limpar entrada",
+    "paste": "Colar",
+    "samplesLabel": "Exemplos rápidos:",
+    "invalidUrl": "Insira uma URL válida do GitHub, caminho de subpasta ou atalho org/repo.",
+    "orgDetected": "Organização detectada: Autoexpansão para o repositório raiz do GitHub Pages.",
+    "subfolderDetected": "Subpasta detectada! Você pode baixar este diretório diretamente como um arquivo ZIP abaixo."
+  },
+  "options": {
+    "protocolLabel": "Protocolo",
+    "flagsLabel": "Opções de Comando",
+    "shallow": "Clone Raso (--depth 1)",
+    "shallowTip": "Baixa apenas o último commit para economizar largura de banda e espaço em disco",
+    "packageManager": "Gerenciador de Pacotes",
+    "branchOption": "Incluir Branch (-b)",
+    "branchTip": "Fazer checkout explícito da branch indicada no link"
+  },
+  "commands": {
+    "heading": "Cadeias de Terminal Instantâneas",
+    "subheading": "Clique em qualquer cartão ou use o botão Copiar para copiar o comando encadeado.",
+    "cloneEnter": {
+      "title": "Clonar e Entrar no Diretório",
+      "desc": "Clona o repositório e navega imediatamente para dentro dele."
+    },
+    "cloneCode": {
+      "title": "Clonar e Abrir no VS Code",
+      "desc": "Clona o repositório, entra no diretório e abre no Visual Studio Code."
+    },
+    "cloneDev": {
+      "title": "Clonar, Instalar e Executar Dev",
+      "desc": "Clona, entra no diretório, instala dependências e inicia o servidor local."
+    },
+    "ghPages": {
+      "title": "Clone Rápido do GitHub Pages",
+      "desc": "Clona o repositório raiz de páginas do usuário ou organização."
+    },
+    "sparseCheckout": {
+      "title": "Git Sparse-Checkout (Nativo)",
+      "desc": "Usa o sparse-checkout nativo do Git para baixar apenas esta subpasta específica."
+    },
+    "copy": "Copiar",
+    "copied": "Copiado!"
+  },
+  "downloader": {
+    "badge": "Subpasta Detectada",
+    "title": "Baixar Pasta como ZIP",
+    "desc": "Obtenha apenas os arquivos desta pasta diretamente no navegador sem clonar o repositório completo.",
+    "subfolderPath": "Caminho de Destino",
+    "branch": "Branch",
+    "button": "Baixar ZIP da Subpasta",
+    "fetchingTree": "Escanear árvore de diretórios...",
+    "fetchingFiles": "Baixando arquivos ({current}/{total})...",
+    "zipping": "Criando arquivo ZIP...",
+    "done": "Download concluído!",
+    "failed": "Falha ao baixar subpasta. Verifique o limite da API ou existência da pasta.",
+    "rateLimitNotice": "A API do GitHub permite 60 requisições anônimas/hora. Precisa de mais? Adicione um token opcional.",
+    "tokenToggle": "Token do GitHub (Opcional)",
+    "tokenPlaceholder": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "tokenSave": "Salvar Token",
+    "tokenSaved": "Token Salvo no Navegador",
+    "tokenHelp": "Personal Access Token com leitura de repositórios públicos. Salvo apenas no seu localStorage."
+  },
+  "history": {
+    "title": "Repositórios Recentes",
+    "empty": "Nenhum repositório recente. Cole um link acima para começar!",
+    "clear": "Limpar Histórico",
+    "reopen": "Carregar repositório"
+  },
+  "features": {
+    "title": "Por que Desenvolvedores Escolhem o CloneLink",
+    "subtitle": "Chega de digitar comandos repetitivos e clonar monorepos gigantes apenas por uma pasta.",
+    "f1Title": "Zero Latência de Servidor e 100% Privado",
+    "f1Desc": "Tudo é executado estritamente no seu navegador. Sem servidores intermediários, logs ou rastreamento.",
+    "f2Title": "Análise Inteligente de Links Profundos",
+    "f2Desc": "Aceita atalhos (user/repo), URLs completas, links SSH ou pastas de branches aninhadas com perfeição.",
+    "f3Title": "Geração de ZIP em Memória no Navegador",
+    "f3Desc": "Extrai e empacota subdiretórios em arquivos ZIP usando JSZip diretamente na memória do navegador.",
+    "f4Title": "Multi-Protocolo e Gerenciadores de Pacotes",
+    "f4Desc": "Alterne instantaneamente entre HTTPS, SSH e GitHub CLI, além de comandos npm, pnpm, yarn e bun."
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como o CloneLink baixa subpastas do GitHub sem clonar o repositório?",
+    "a1": "O CloneLink consulta a API REST pública do GitHub para obter a árvore de arquivos desse caminho específico. Ele busca o conteúdo dos arquivos de forma assíncrona e empacota tudo em um arquivo .zip na memória do navegador usando o JSZip.",
+    "q2": "Meus repositórios privados ou tokens do GitHub estão expostos?",
+    "a2": "Não. O CloneLink é uma aplicação estática hospedada no GitHub Pages sem nenhum servidor backend. Qualquer token opcional informado fica armazenado exclusivamente no localStorage do seu navegador e conversa apenas com api.github.com.",
+    "q3": "Quais formatos de URL do GitHub são suportados?",
+    "a3": "Suporta URLs HTTPS padrão, URLs SSH (git@github.com:...), atalhos user/repo, nomes únicos de organização e links profundos (tree/branch/subfolder).",
+    "q4": "Qual é a diferença entre clone raso (shallow) e sparse-checkout?",
+    "a4": "O clone raso (--depth 1) baixa apenas o último commit de todo o repositório. Já o sparse-checkout instrui o Git a preencher no seu disco local exclusivamente os subdiretórios que você especificar.",
+    "q5": "O que fazer se atingir o limite de taxa da API do GitHub?",
+    "a5": "O GitHub limita IPs não autenticados a 60 requisições por hora. Você pode gerar um Personal Access Token gratuito no GitHub e colar no campo opcional para aumentar seu limite para 5.000 requisições por hora."
+  },
+  "footer": {
+    "tagline": "O acelerador de Git e baixador de diretórios ultra-minimalista 100% client-side.",
+    "creator": "Criado com carinho por Kishara Dilshan.",
+    "supportCta": "Buy Me a Coffee",
+    "githubCta": "Repositório GitHub",
+    "privacy": "Sem Rastreamento • 100% Lado do Cliente • Código Aberto"
+  }
+}

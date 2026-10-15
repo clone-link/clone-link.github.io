@@ -1,0 +1,170 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { supportedLanguages, type SupportedLanguageCode } from '../i18n/languages';
+import { useTranslations, getLocalizedPath } from '../i18n/utils';
+
+interface Props {
+  lang: SupportedLanguageCode;
+  title?: string;
+  description?: string;
+}
+
+const { lang, title: customTitle, description: customDescription } = Astro.props;
+const t = useTranslations(lang);
+
+const title = customTitle || t.meta.title;
+const description = customDescription || t.meta.description;
+const keywords = t.meta.keywords;
+
+const pathname = Astro.url.pathname;
+const siteUrl = 'https://clone-link.github.io';
+const canonicalUrl = `${siteUrl}${pathname.replace(/\/+$/, '') || '/'}`;
+
+// Build JSON-LD structured data
+const webAppSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'CloneLink',
+  alternateName: 'Clone Link Git Utility',
+  url: siteUrl,
+  applicationCategory: 'DeveloperApplication',
+  operatingSystem: 'Windows, macOS, Linux',
+  browserRequirements: 'Requires JavaScript. Modern browser supported.',
+  description: description,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Kishara Dilshan',
+    url: 'https://buymeacoffee.com/kisharadilz',
+  },
+  keywords: keywords,
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: t.faq.q1,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t.faq.a1,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: t.faq.q2,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t.faq.a2,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: t.faq.q3,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t.faq.a3,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: t.faq.q4,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t.faq.a4,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: t.faq.q5,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t.faq.a5,
+      },
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Technical SEO Metadata -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Kishara Dilshan" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Hreflang Tags for all 7 Languages -->
+    {supportedLanguages.map((l) => (
+      <link
+        rel="alternate"
+        hreflang={l.code}
+        href={`${siteUrl}${getLocalizedPath(pathname, l.code as SupportedLanguageCode)}`}
+      />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="CloneLink" />
+    <meta property="og:locale" content={lang} />
+    <meta property="og:image" content={`${siteUrl}/og-image.png`} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}/og-image.png`} />
+
+    <!-- WebApplication and FAQ JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Dark/Light Theme Script (Instant Execution to prevent FOUT) -->
+    <script is:inline>
+      (function () {
+        try {
+          const theme = localStorage.getItem('theme') || 'light';
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Google Fonts Preconnect & Inter / JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-clonelink-lightBg dark:bg-clonelink-darkBg text-gray-900 dark:text-gray-100 min-h-screen flex flex-col font-sans antialiased selection:bg-clonelink-indigo/20 dark:selection:bg-clonelink-emerald/30 transition-colors duration-200">
+    <Navbar currentLang={lang} currentPath={pathname} />
+
+    <main class="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <slot />
+    </main>
+
+    <Footer currentLang={lang} />
+  </body>
+</html>

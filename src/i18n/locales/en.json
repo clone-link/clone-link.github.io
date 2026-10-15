@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "CloneLink | Smart Git Clone Command Generator & Subfolder Downloader",
+    "description": "Generate chained terminal commands (clone + cd + VS Code/npm) and download specific GitHub subfolders as ZIP directly in your browser. 100% client-side with zero server tracking.",
+    "keywords": "git clone command generator, download github subfolder online, github clone link tool, clone and cd, clone and open vs code, github sparse checkout, download github directory as zip"
+  },
+  "nav": {
+    "support": "Support Developer",
+    "supportShort": "Support",
+    "supportTooltip": "Support developer on Buy Me a Coffee",
+    "themeLight": "Switch to Dark Mode",
+    "themeDark": "Switch to Light Mode",
+    "selectLanguage": "Select Language"
+  },
+  "hero": {
+    "badge": "100% Client-Side • Zero Server Dependencies • Total Privacy",
+    "title": "Smart Git Clone Generator",
+    "titleHighlight": "& Subfolder Downloader",
+    "subtitle": "Paste any GitHub repository URL, deep folder link, or org/repo shorthand to instantly generate chained terminal commands and download subfolders as ZIP."
+  },
+  "input": {
+    "label": "GitHub Repository or Folder URL",
+    "placeholder": "Paste GitHub URL, subfolder link, or shorthand (e.g. facebook/react, vercel/next.js/tree/canary/examples)...",
+    "clear": "Clear input",
+    "paste": "Paste",
+    "samplesLabel": "Quick samples:",
+    "invalidUrl": "Please enter a valid GitHub URL, deep subfolder path, or org/repo shorthand.",
+    "orgDetected": "Single organization detected: Auto-expanding to GitHub Pages personal repo.",
+    "subfolderDetected": "Deep folder detected! You can download this directory directly as a ZIP archive below."
+  },
+  "options": {
+    "protocolLabel": "Protocol",
+    "flagsLabel": "Command Options",
+    "shallow": "Shallow Clone (--depth 1)",
+    "shallowTip": "Fetches only the latest commit to save bandwidth and disk space",
+    "packageManager": "Package Manager",
+    "branchOption": "Include Branch (-b)",
+    "branchTip": "Explicitly checkout the branch from the deep URL"
+  },
+  "commands": {
+    "heading": "Instant Terminal Chains",
+    "subheading": "Click anywhere on a card or use the Copy button to copy the chained command.",
+    "cloneEnter": {
+      "title": "Clone & Enter Directory",
+      "desc": "Clones the repository and immediately navigates inside it."
+    },
+    "cloneCode": {
+      "title": "Clone & Open in VS Code",
+      "desc": "Clones the repo, enters the directory, and opens it in Visual Studio Code."
+    },
+    "cloneDev": {
+      "title": "Clone, Install & Run Dev",
+      "desc": "Clones, enters folder, installs dependencies, and boots the local dev server."
+    },
+    "ghPages": {
+      "title": "GitHub Pages Quick-Clone",
+      "desc": "Clones the user/organization GitHub Pages root repository."
+    },
+    "sparseCheckout": {
+      "title": "Git Sparse-Checkout (Native)",
+      "desc": "Uses Git's native sparse-checkout to download only this specific subfolder."
+    },
+    "copy": "Copy",
+    "copied": "Copied!"
+  },
+  "downloader": {
+    "badge": "Subfolder Detected",
+    "title": "Download Folder as ZIP",
+    "desc": "Fetch only the files in this directory directly in your browser without cloning the full repository.",
+    "subfolderPath": "Target Path",
+    "branch": "Branch",
+    "button": "Download Subfolder ZIP",
+    "fetchingTree": "Scanning folder tree...",
+    "fetchingFiles": "Downloading files ({current}/{total})...",
+    "zipping": "Creating ZIP archive...",
+    "done": "Download complete!",
+    "failed": "Failed to download subfolder. Check rate limit or folder existence.",
+    "rateLimitNotice": "GitHub API allows 60 free anonymous requests/hour. Need more? Add an optional token.",
+    "tokenToggle": "GitHub Token (Optional)",
+    "tokenPlaceholder": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "tokenSave": "Save Token",
+    "tokenSaved": "Token Saved in Browser",
+    "tokenHelp": "Personal Access Token with 'public_repo' read access. Stored strictly in your browser localStorage."
+  },
+  "history": {
+    "title": "Recent Repositories",
+    "empty": "No recent repositories yet. Paste a link above to get started!",
+    "clear": "Clear History",
+    "reopen": "Load repository"
+  },
+  "features": {
+    "title": "Why Developers Choose CloneLink",
+    "subtitle": "Stop typing repetitive terminal commands and cloning giant monorepos just for one directory.",
+    "f1Title": "Zero Server Latency & 100% Private",
+    "f1Desc": "Everything executes strictly in your browser. No proxies, no server logs, and no analytics spying on your repos.",
+    "f2Title": "Smart Deep URL Parsing",
+    "f2Desc": "Accepts shorthand (user/repo), full URLs, SSH links, or deep tree links (repo/tree/main/subfolder) seamlessly.",
+    "f3Title": "Browser-Side ZIP Generation",
+    "f3Desc": "Extract and package subdirectories into ZIP archives using JSZip directly inside browser memory.",
+    "f4Title": "Multi-Protocol & Package Managers",
+    "f4Desc": "Instantly switch between HTTPS, SSH, and GitHub CLI, plus npm, pnpm, yarn, and bun dev script chains."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How does CloneLink download GitHub subfolders without cloning?",
+    "a1": "CloneLink queries the public GitHub REST API to retrieve the repository file tree for that specific subpath. It fetches the raw file contents asynchronously and packages them into a clean .zip file right inside your browser memory using JSZip.",
+    "q2": "Are my private repositories or GitHub tokens exposed?",
+    "a2": "No. CloneLink is a static, 100% client-side web application hosted on GitHub Pages. No backend server exists. Any GitHub token you optionally provide is stored exclusively in your browser's localStorage and only transmitted directly to api.github.com.",
+    "q3": "What GitHub URL formats are supported?",
+    "a3": "CloneLink supports standard HTTPS URLs (https://github.com/user/repo), SSH URLs (git@github.com:user/repo.git), shorthand (user/repo), single organization names (which expand to user/user.github.io), and deep links (https://github.com/user/repo/tree/branch/subfolder).",
+    "q4": "What is the difference between shallow clone and sparse-checkout?",
+    "a4": "A shallow clone (--depth 1) fetches only the latest commit history of the whole repository. A sparse-checkout configures Git to only populate specific directories on your local disk from the remote repository.",
+    "q5": "What should I do if I hit the GitHub API rate limit?",
+    "a5": "GitHub limits unauthenticated IP requests to 60 per hour. You can create a free Personal Access Token (classic with public_repo read permission, or fine-grained token) and paste it into the optional token field to increase your limit to 5,000 requests per hour."
+  },
+  "footer": {
+    "tagline": "The ultra-minimal, 100% client-side Git clone accelerator & directory downloader.",
+    "creator": "Built with passion by Kishara Dilshan.",
+    "supportCta": "Buy Me a Coffee",
+    "githubCta": "GitHub Repository",
+    "privacy": "Zero Tracking • 100% Client-Side • Open Source"
+  }
+}

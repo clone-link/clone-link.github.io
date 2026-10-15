@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CloneGenerator from '../components/CloneGenerator';
+import Features from '../components/Features.astro';
+import Faq from '../components/Faq.astro';
+import { useTranslations } from '../i18n/utils';
+
+const lang = 'en';
+const t = useTranslations(lang);
+---
+
+<Layout lang={lang}>
+  <!-- Hero Section -->
+  <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+    <!-- Top Privacy & Speed Badge -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-clonelink-darkCard border border-indigo-200/60 dark:border-clonelink-emerald/30 text-clonelink-indigo dark:text-clonelink-emerald text-xs font-semibold tracking-wide mb-6 shadow-sm">
+      <span class="w-2 h-2 rounded-full bg-clonelink-emerald animate-pulse"></span>
+      <span>{t.hero.badge}</span>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight leading-tight sm:leading-none">
+      {t.hero.title} <br class="hidden sm:inline" />
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-clonelink-indigo via-indigo-500 to-purple-600 dark:from-clonelink-emerald dark:to-teal-300">
+        {t.hero.titleHighlight}
+      </span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="mt-4 sm:mt-6 text-sm sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
+      {t.hero.subtitle}
+    </p>
+  </div>
+
+  <!-- Interactive React Island for URL Parsing, Chained Commands & ZIP Downloader -->
+  <CloneGenerator client:load dict={t} lang={lang} />
+
+  <!-- Features Grid -->
+  <Features currentLang={lang} />
+
+  <!-- FAQ Section with Schema Accordions -->
+  <Faq currentLang={lang} />
+</Layout>

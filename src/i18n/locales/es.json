@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "CloneLink | Generador Inteligente de Comandos Git Clone y Descargador de Subcarpetas",
+    "description": "Genera comandos de terminal encadenados (clone + cd + VS Code/npm) y descarga subcarpetas de GitHub en ZIP directamente en tu navegador. 100% del lado del cliente.",
+    "keywords": "generador comando git clone, descargar subcarpeta github online, herramienta clonar github, git clone y cd, sparse checkout github"
+  },
+  "nav": {
+    "support": "Apoyar al Desarrollador",
+    "supportShort": "Apoyar",
+    "supportTooltip": "Invítame a un café en Buy Me a Coffee",
+    "themeLight": "Cambiar a Modo Oscuro",
+    "themeDark": "Cambiar a Modo Claro",
+    "selectLanguage": "Seleccionar Idioma"
+  },
+  "hero": {
+    "badge": "100% Lado del Cliente • Cero Dependencias de Servidor • Privacidad Total",
+    "title": "Generador Inteligente de Git Clone",
+    "titleHighlight": "y Descargador de Subcarpetas",
+    "subtitle": "Pega cualquier URL de GitHub, enlace a subcarpetas o atajo de organización para generar comandos encadenados al instante y descargar carpetas en ZIP."
+  },
+  "input": {
+    "label": "URL del Repositorio o Carpeta de GitHub",
+    "placeholder": "Pega URL de GitHub, enlace de carpeta o atajo (ej. facebook/react, vercel/next.js/tree/canary/examples)...",
+    "clear": "Limpiar entrada",
+    "paste": "Pegar",
+    "samplesLabel": "Ejemplos rápidos:",
+    "invalidUrl": "Por favor introduce una URL válida de GitHub, ruta de carpeta o atajo org/repo.",
+    "orgDetected": "Organización detectada: Autoexpansión al repositorio raíz de GitHub Pages.",
+    "subfolderDetected": "¡Subcarpeta detectada! Puedes descargar este directorio directamente como un archivo ZIP abajo."
+  },
+  "options": {
+    "protocolLabel": "Protocolo",
+    "flagsLabel": "Opciones de Comando",
+    "shallow": "Clon Superficial (--depth 1)",
+    "shallowTip": "Descarga solo el último commit para ahorrar ancho de banda y espacio",
+    "packageManager": "Gestor de Paquetes",
+    "branchOption": "Incluir Rama (-b)",
+    "branchTip": "Hacer checkout explícito de la rama indicada en la URL"
+  },
+  "commands": {
+    "heading": "Cadenas de Terminal Instantáneas",
+    "subheading": "Haz clic en cualquier tarjeta o usa el botón Copiar para copiar el comando encadenado.",
+    "cloneEnter": {
+      "title": "Clonar y Entrar al Directorio",
+      "desc": "Clona el repositorio e inmediatamente navega dentro de él."
+    },
+    "cloneCode": {
+      "title": "Clonar y Abrir en VS Code",
+      "desc": "Clona el repositorio, entra al directorio y lo abre en Visual Studio Code."
+    },
+    "cloneDev": {
+      "title": "Clonar, Instalar y Ejecutar Dev",
+      "desc": "Clona, entra al directorio, instala dependencias e inicia el servidor de desarrollo local."
+    },
+    "ghPages": {
+      "title": "Clon Rápido de GitHub Pages",
+      "desc": "Clona el repositorio raíz de GitHub Pages del usuario u organización."
+    },
+    "sparseCheckout": {
+      "title": "Git Sparse-Checkout (Nativo)",
+      "desc": "Usa sparse-checkout nativo de Git para descargar solo esta subcarpeta específica."
+    },
+    "copy": "Copiar",
+    "copied": "¡Copiado!"
+  },
+  "downloader": {
+    "badge": "Subcarpeta Detectada",
+    "title": "Descargar Carpeta como ZIP",
+    "desc": "Obtén solo los archivos de este directorio en tu navegador sin clonar todo el repositorio.",
+    "subfolderPath": "Ruta de Destino",
+    "branch": "Rama",
+    "button": "Descargar ZIP de Subcarpeta",
+    "fetchingTree": "Escaneando árbol de carpetas...",
+    "fetchingFiles": "Descargando archivos ({current}/{total})...",
+    "zipping": "Creando archivo ZIP...",
+    "done": "¡Descarga completa!",
+    "failed": "Error al descargar subcarpeta. Verifica el límite de la API o la existencia de la carpeta.",
+    "rateLimitNotice": "La API de GitHub permite 60 solicitudes anónimas/hora. ¿Necesitas más? Añade un token opcional.",
+    "tokenToggle": "Token de GitHub (Opcional)",
+    "tokenPlaceholder": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "tokenSave": "Guardar Token",
+    "tokenSaved": "Token Guardado en el Navegador",
+    "tokenHelp": "Token de Acceso Personal con lectura de repositorios públicos. Almacenado únicamente en localStorage."
+  },
+  "history": {
+    "title": "Repositorios Recientes",
+    "empty": "No hay repositorios recientes. ¡Pega un enlace arriba para comenzar!",
+    "clear": "Borrar Historial",
+    "reopen": "Cargar repositorio"
+  },
+  "features": {
+    "title": "¿Por Qué los Desarrolladores Eligen CloneLink?",
+    "subtitle": "Deja de escribir comandos repetitivos y de clonar monorrepos gigantes solo para una carpeta.",
+    "f1Title": "Cero Latencia de Servidor y 100% Privado",
+    "f1Desc": "Todo se ejecuta exclusivamente en tu navegador. Sin servidores intermedios, sin registros ni rastreo.",
+    "f2Title": "Análisis Inteligente de Enlaces Profundos",
+    "f2Desc": "Acepta atajos (user/repo), URLs completas, enlaces SSH o ramas anidadas sin problemas.",
+    "f3Title": "Generación de ZIP en Memoria del Navegador",
+    "f3Desc": "Extrae y empaqueta subdirectorios en archivos ZIP usando JSZip directamente en la memoria del navegador.",
+    "f4Title": "Multi-Protocolo y Gestores de Paquetes",
+    "f4Desc": "Cambia al instante entre HTTPS, SSH y GitHub CLI, además de cadenas npm, pnpm, yarn y bun."
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo descarga CloneLink subcarpetas de GitHub sin clonar?",
+    "a1": "CloneLink consulta la API REST pública de GitHub para obtener la lista de archivos de esa ruta específica. Luego descarga los archivos de forma asíncrona y los empaqueta en un archivo .zip dentro de la memoria de tu navegador con JSZip.",
+    "q2": "¿Están expuestos mis repositorios privados o tokens?",
+    "a2": "No. CloneLink es una aplicación estática alojada en GitHub Pages. No existe ningún servidor de backend. Cualquier token opcional se guarda en tu localStorage y solo se comunica directamente con api.github.com.",
+    "q3": "¿Qué formatos de URL de GitHub son compatibles?",
+    "a3": "Soporta URLs HTTPS estándar, URLs SSH, atajos user/repo, nombres de organizaciones y enlaces profundos de carpetas (tree/branch/subfolder).",
+    "q4": "¿Cuál es la diferencia entre clon superficial y sparse-checkout?",
+    "a4": "Un clon superficial (--depth 1) descarga únicamente el último commit del repositorio completo. Un sparse-checkout instruye a Git para descargar solo los directorios específicos que necesitas en tu disco local.",
+    "q5": "¿Qué hago si alcanzo el límite de la API de GitHub?",
+    "a5": "GitHub limita a 60 solicitudes por hora para IPs no autenticadas. Puedes crear un Personal Access Token gratuito en GitHub y pegarlo en el campo opcional para aumentar tu límite a 5,000 solicitudes por hora."
+  },
+  "footer": {
+    "tagline": "El acelerador de Git y descargador de subcarpetas ultra-minimalista 100% del lado del cliente.",
+    "creator": "Creado con pasión por Kishara Dilshan.",
+    "supportCta": "Invítame a un Café",
+    "githubCta": "Repositorio GitHub",
+    "privacy": "Cero Rastreo • 100% Lado del Cliente • Código Abierto"
+  }
+}

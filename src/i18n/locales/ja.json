@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "CloneLink | スマート Git Clone コマンドジェネレーター & サブフォルダダウンローダー",
+    "description": "ターミナルコマンド（clone + cd + VS Code/npm）を瞬時に連結生成し、GitHubの特定サブフォルダをZIP形式でブラウザ直接ダウンロード。100%クライアントサイド実行で安心のプライバシー。",
+    "keywords": "git clone コマンド 生成, github サブフォルダ ダウンロード, github クローン ツール, git clone cd 同時実行, github sparse checkout"
+  },
+  "nav": {
+    "support": "開発者を支援",
+    "supportShort": "支援",
+    "supportTooltip": "Buy Me a Coffee で開発者を応援",
+    "themeLight": "ダークモードに切り替え",
+    "themeDark": "ライトモードに切り替え",
+    "selectLanguage": "言語を選択"
+  },
+  "hero": {
+    "badge": "100% クライアントサイド • サーバー依存ゼロ • 完全なプライバシー保護",
+    "title": "スマート Git Clone ジェネレーター",
+    "titleHighlight": "& サブフォルダダウンローダー",
+    "subtitle": "GitHubリポジトリのURL、特定サブフォルダのリンク、または「ユーザー/リポジトリ」を入力するだけで、連結コマンドを瞬時に生成し、フォルダをZIPダウンロードできます。"
+  },
+  "input": {
+    "label": "GitHub リポジトリまたはフォルダURL",
+    "placeholder": "GitHub URL、サブフォルダリンク、略称を入力（例: facebook/react, vercel/next.js/tree/canary/examples）...",
+    "clear": "入力をクリア",
+    "paste": "貼り付け",
+    "samplesLabel": "クイックサンプル:",
+    "invalidUrl": "有効なGitHub URL、サブフォルダのパス、または「ユーザー/リポ」を入力してください。",
+    "orgDetected": "組織またはユーザー名を検出: GitHub Pages ルートリポジトリへ自動展開します。",
+    "subfolderDetected": "サブフォルダを検出しました！以下のボタンから直接ZIPアーカイブとしてダウンロードできます。"
+  },
+  "options": {
+    "protocolLabel": "プロトコル",
+    "flagsLabel": "コマンドオプション",
+    "shallow": "浅いクローン (--depth 1)",
+    "shallowTip": "最新のコミット履歴のみを取得し、通信量とディスク容量を節約します",
+    "packageManager": "パッケージマネージャー",
+    "branchOption": "ブランチ指定を含める (-b)",
+    "branchTip": "URLで指定されたブランチを明示的にチェックアウトします"
+  },
+  "commands": {
+    "heading": "ワンクリック ターミナルチェーン",
+    "subheading": "カードをクリックするか「コピー」ボタンを押して、連結されたコマンドをコピーします。",
+    "cloneEnter": {
+      "title": "クローン & ディレクトリ移動",
+      "desc": "リポジトリをクローンし、直ちに cd でそのディレクトリへ移動します。"
+    },
+    "cloneCode": {
+      "title": "クローン & VS Code で開く",
+      "desc": "クローンし、ディレクトリに入り、Visual Studio Code を即座に起動します。"
+    },
+    "cloneDev": {
+      "title": "クローン、依存関係導入 & 開発サーバー起動",
+      "desc": "クローン、cd 移動、依存関係インストール、ローカル開発環境起動をワンステップで実行。"
+    },
+    "ghPages": {
+      "title": "GitHub Pages クイッククローン",
+      "desc": "ユーザーまたは組織の GitHub Pages ルートリポジトリをクローンします。"
+    },
+    "sparseCheckout": {
+      "title": "Git Sparse-Checkout (ネイティブ)",
+      "desc": "Git 本体の sparse-checkout 機能を使い、この特定フォルダのみをクローンします。"
+    },
+    "copy": "コピー",
+    "copied": "コピー完了!"
+  },
+  "downloader": {
+    "badge": "サブフォルダ検出",
+    "title": "フォルダをZIPとしてダウンロード",
+    "desc": "巨大なリポジトリ全体をクローンすることなく、この特定フォルダ内のファイルのみをブラウザ上で直接取得します。",
+    "subfolderPath": "対象パス",
+    "branch": "ブランチ",
+    "button": "サブフォルダをZIPダウンロード",
+    "fetchingTree": "フォルダ構成をスキャン中...",
+    "fetchingFiles": "ファイルをダウンロード中 ({current}/{total})...",
+    "zipping": "ZIPアーカイブを生成中...",
+    "done": "ダウンロードが完了しました！",
+    "failed": "ダウンロードに失敗しました。API制限またはフォルダの存在を確認してください。",
+    "rateLimitNotice": "GitHub APIの匿名利用は毎時60リクエストまでです。上限を引き上げるにはトークンを登録してください。",
+    "tokenToggle": "GitHub トークン (任意)",
+    "tokenPlaceholder": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "tokenSave": "トークンを保存",
+    "tokenSaved": "ブラウザ内に保存されました",
+    "tokenHelp": "公開リポジトリ読み取り権限を持つパーソナルアクセストークン。ブラウザの localStorage にのみ安全に保存されます。"
+  },
+  "history": {
+    "title": "最近のリポジトリ履歴",
+    "empty": "履歴はまだありません。上部にURLを入力してお試しください！",
+    "clear": "履歴を消去",
+    "reopen": "リポジトリを読み込む"
+  },
+  "features": {
+    "title": "CloneLink が選ばれる理由",
+    "subtitle": "繰り返しのターミナル操作や、1つのフォルダのために巨大なリポジトリ全体をクローンする手間をゼロに。",
+    "f1Title": "サーバー遅延ゼロ & 100% のプライバシー",
+    "f1Desc": "すべての処理はお使いのブラウザ上で完結。中継サーバーやトラッキング、ログ収集は一切ありません。",
+    "f2Title": "高度なディープURL自動解析",
+    "f2Desc": "ユーザー/リポジトリ略称、完全なURL、SSHリンク、階層の深いサブフォルダリンク（tree/branch/subfolder）を正確に識別。",
+    "f3Title": "ブラウザ内メモリでのZIP生成",
+    "f3Desc": "JSZip を活用し、リモートAPI経由で取得したフォルダをブラウザのメモリ上で直接ZIP圧縮・ダウンロード。",
+    "f4Title": "主要プロトコル & パッケージマネージャー対応",
+    "f4Desc": "HTTPS、SSH、GitHub CLI の即時切り替えに加え、npm、pnpm、yarn、bun の dev 起動コマンドを網羅。"
+  },
+  "faq": {
+    "title": "よくある質問 (FAQ)",
+    "q1": "CloneLink はどのようにして全体をクローンせずにサブフォルダをダウンロードするのですか？",
+    "a1": "CloneLink は GitHub の公開 REST API を利用して特定パスのファイル一覧を取得し、各ファイルの内容を非同期でフェッチして、JSZip を用いてブラウザのメモリ上で ZIP ファイルに圧縮・出力します。",
+    "q2": "非公開リポジトリや登録した GitHub トークンが漏洩する心配はありませんか？",
+    "a2": "いいえ、心配ありません。CloneLink は GitHub Pages 上で動作する純粋な静的クライアントアプリケーションです。バックエンドサーバーは存在せず、任意で入力されたトークンはブラウザの localStorage にのみ保存され、api.github.com への直接通信以外には送信されません。",
+    "q3": "どのような GitHub URL 形式に対応していますか？",
+    "a3": "標準的な HTTPS URL、SSH URL、略記（owner/repo）、単一の組織名、深いサブフォルダURL（tree/branch/subfolder）など、ほぼすべての形式に対応しています。",
+    "q4": "Shallow Clone と Sparse-Checkout の違いは何ですか？",
+    "a4": "Shallow Clone（--depth 1）はリポジトリ全体の最新のコミット履歴のみを取得します。一方、Sparse-Checkout はローカルのディスク上に指定した特定のディレクトリのみを展開するように Git を構成します。",
+    "q5": "GitHub API のレート制限（Rate Limit）に達した場合はどうすればよいですか？",
+    "a5": "未認証IPの場合、GitHub API は毎時60リクエストに制限されています。GitHub で無料の Personal Access Token（public_repo 権限）を作成し、任意のトークン入力欄に設定することで、毎時 5,000 リクエストまで拡大できます。"
+  },
+  "footer": {
+    "tagline": "極限までシンプルさを追求した、100% クライアントサイドの Git クローン加速 & フォルダダウンローダー。",
+    "creator": "Created by Kishara Dilshan.",
+    "supportCta": "開発者を支援 (Buy Me a Coffee)",
+    "githubCta": "GitHub リポジトリ",
+    "privacy": "トラッキングゼロ • 100% クライアントサイド • オープンソース"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "CloneLink | Smarter Git-Clone Befehlsgenerator & Unterordner-Downloader",
+    "description": "Erstellen Sie verkettete Terminal-Befehle (clone + cd + VS Code/npm) und laden Sie GitHub-Unterordner direkt im Browser als ZIP herunter. 100% clientseitig.",
+    "keywords": "git clone befehlsgenerator, github unterordner online herunterladen, github clone tool, git clone und cd, github sparse checkout"
+  },
+  "nav": {
+    "support": "Entwickler Unterstützen",
+    "supportShort": "Spenden",
+    "supportTooltip": "Spendieren Sie einen Kaffee auf Buy Me a Coffee",
+    "themeLight": "Zu Dunkelmodus wechseln",
+    "themeDark": "Zu Hellmodus wechseln",
+    "selectLanguage": "Sprache wählen"
+  },
+  "hero": {
+    "badge": "100% Clientseitig • Keine Server-Abhängigkeiten • Absolute Privatsphäre",
+    "title": "Smarter Git-Clone Generator",
+    "titleHighlight": "& Unterordner-Downloader",
+    "subtitle": "Fügen Sie eine beliebige GitHub-URL, Unterordner-Link oder Org/Repo-Kürzel ein, um sofortige Terminal-Befehlsketten zu erstellen und Ordner als ZIP zu laden."
+  },
+  "input": {
+    "label": "GitHub Repository- oder Ordner-URL",
+    "placeholder": "GitHub-URL, Ordner-Link oder Kürzel einfügen (z. B. facebook/react, vercel/next.js/tree/canary/examples)...",
+    "clear": "Eingabe löschen",
+    "paste": "Einfügen",
+    "samplesLabel": "Schnellbeispiele:",
+    "invalidUrl": "Bitte geben Sie eine gültige GitHub-URL, einen Unterordner-Pfad oder ein Kürzel ein.",
+    "orgDetected": "Organisation erkannt: Automatische Erweiterung zum GitHub Pages Haupt-Repository.",
+    "subfolderDetected": "Unterordner erkannt! Sie können dieses Verzeichnis unten direkt als ZIP-Archiv herunterladen."
+  },
+  "options": {
+    "protocolLabel": "Protokoll",
+    "flagsLabel": "Befehlsoptionen",
+    "shallow": "Shallow Clone (--depth 1)",
+    "shallowTip": "Lädt nur den neuesten Commit herunter, um Bandbreite und Speicherplatz zu sparen",
+    "packageManager": "Paketmanager",
+    "branchOption": "Branch einbinden (-b)",
+    "branchTip": "Explizit den im Link angegebenen Branch auschecken"
+  },
+  "commands": {
+    "heading": "Sofortige Terminal-Befehlsketten",
+    "subheading": "Klicken Sie auf eine Karte oder nutzen Sie die Kopieren-Schaltfläche, um den Befehl zu kopieren.",
+    "cloneEnter": {
+      "title": "Klonen & Verzeichnis betreten",
+      "desc": "Klont das Repository und wechselt sofort mit cd hinein."
+    },
+    "cloneCode": {
+      "title": "Klonen & in VS Code öffnen",
+      "desc": "Klont das Repo, wechselt hinein und startet Visual Studio Code."
+    },
+    "cloneDev": {
+      "title": "Klonen, Installieren & Dev starten",
+      "desc": "Klont, wechselt hinein, installiert Abhängigkeiten und startet den lokalen Server."
+    },
+    "ghPages": {
+      "title": "GitHub Pages Schnellklon",
+      "desc": "Klont das GitHub Pages Root-Repository des Benutzers oder der Organisation."
+    },
+    "sparseCheckout": {
+      "title": "Git Sparse-Checkout (Nativ)",
+      "desc": "Nutzt Gits natives Sparse-Checkout, um nur diesen spezifischen Unterordner zu laden."
+    },
+    "copy": "Kopieren",
+    "copied": "Kopiert!"
+  },
+  "downloader": {
+    "badge": "Unterordner Erkannt",
+    "title": "Ordner als ZIP herunterladen",
+    "desc": "Laden Sie nur die Dateien dieses Ordners direkt im Browser herunter, ohne das gesamte Repo zu klonen.",
+    "subfolderPath": "Zielpfad",
+    "branch": "Branch",
+    "button": "Unterordner als ZIP laden",
+    "fetchingTree": "Ordnerbaum wird gescannt...",
+    "fetchingFiles": "Dateien werden heruntergeladen ({current}/{total})...",
+    "zipping": "ZIP-Archiv wird erstellt...",
+    "done": "Download abgeschlossen!",
+    "failed": "Fehler beim Herunterladen des Unterordners. Prüfen Sie das API-Limit.",
+    "rateLimitNotice": "Die GitHub-API erlaubt 60 kostenlose Anfragen/Std. Mehr nötig? Fügen Sie ein Token hinzu.",
+    "tokenToggle": "GitHub-Token (Optional)",
+    "tokenPlaceholder": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "tokenSave": "Token speichern",
+    "tokenSaved": "Token im Browser gespeichert",
+    "tokenHelp": "Persönliches Zugriffstoken mit Leserechten. Wird ausschließlich lokal in Ihrem Browser gespeichert."
+  },
+  "history": {
+    "title": "Zuletzt verwendete Repositories",
+    "empty": "Noch keine Repositories im Verlauf. Fügen Sie oben einen Link ein!",
+    "clear": "Verlauf leeren",
+    "reopen": "Repository laden"
+  },
+  "features": {
+    "title": "Warum Entwickler CloneLink wählen",
+    "subtitle": "Schluss mit zeitraubenden Terminalbefehlen und dem Klonen riesiger Monorepos für einen Ordner.",
+    "f1Title": "Keine Server-Latenz & 100% Privat",
+    "f1Desc": "Alles läuft direkt im Browser. Keine Proxy-Server, keine Protokolle und kein Tracking.",
+    "f2Title": "Intelligente Deep-URL-Analyse",
+    "f2Desc": "Akzeptiert Kürzel (user/repo), vollständige URLs, SSH-Links oder verschachtelte Branch-Pfade.",
+    "f3Title": "ZIP-Erstellung im Browser-Speicher",
+    "f3Desc": "Extrahiert und komprimiert Unterordner mit JSZip direkt im Arbeitsspeicher des Browsers.",
+    "f4Title": "Multi-Protokoll & Paketmanager",
+    "f4Desc": "Wechseln Sie nahtlos zwischen HTTPS, SSH und GitHub CLI sowie npm, pnpm, yarn und bun."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen (FAQ)",
+    "q1": "Wie lädt CloneLink GitHub-Unterordner herunter ohne zu klonen?",
+    "a1": "CloneLink fragt die öffentliche GitHub-REST-API ab, um die Dateiliste des Pfads zu erhalten. Es lädt die Dateiinhalte asynchron herunter und packt sie im Arbeitsspeicher des Browsers mit JSZip in eine ZIP-Datei.",
+    "q2": "Werden meine Daten oder GitHub-Tokens übertragen?",
+    "a2": "Nein. CloneLink ist eine statische Webanwendung auf GitHub Pages ohne Server. Optionale Tokens verbleiben im localStorage Ihres Browsers und kommunizieren ausschließlich mit api.github.com.",
+    "q3": "Welche GitHub-URL-Formate werden unterstützt?",
+    "a3": "Es werden Standard-HTTPS-URLs, SSH-URLs, Kürzel wie user/repo, einzelne Organisationsnamen sowie Deep-Links (tree/branch/subfolder) unterstützt.",
+    "q4": "Was ist der Unterschied zwischen Shallow Clone und Sparse-Checkout?",
+    "a4": "Ein Shallow Clone (--depth 1) lädt nur den neuesten Commit des gesamten Repos herunter. Ein Sparse-Checkout weist Git an, ausschließlich bestimmte Verzeichnisse lokal bereitzustellen.",
+    "q5": "Was kann ich tun, wenn das API-Ratenlimit erreicht ist?",
+    "a5": "GitHub limitiert nicht authentifizierte Anfragen auf 60/Stunde. Sie können ein kostenloses Personal Access Token in GitHub erstellen und im optionalen Token-Feld eintragen, um das Limit auf 5.000 Anfragen/Stunde zu erhöhen."
+  },
+  "footer": {
+    "tagline": "Das ultra-minimale, 100% clientseitige Git-Beschleuniger- und Verzeichnis-Download-Tool.",
+    "creator": "Entwickelt mit Leidenschaft von Kishara Dilshan.",
+    "supportCta": "Kaffee spendieren",
+    "githubCta": "GitHub Repository",
+    "privacy": "Kein Tracking • 100% Clientseitig • Open Source"
+  }
+}

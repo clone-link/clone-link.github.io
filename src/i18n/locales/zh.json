@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "CloneLink | 智能 Git Clone 命令生成器与子文件夹下载器",
+    "description": "即时生成终端组合命令（clone + cd + VS Code/npm），并在浏览器中直接将 GitHub 仓库子文件夹下载为 ZIP。100% 纯客户端运行，保障代码隐私。",
+    "keywords": "git clone 命令生成器, github 子文件夹在线下载, github 克隆工具, git clone 和 cd, github sparse checkout, github 单目录下载"
+  },
+  "nav": {
+    "support": "支持开发者",
+    "supportShort": "支持",
+    "supportTooltip": "在 Buy Me a Coffee 上请作者喝杯咖啡",
+    "themeLight": "切换为暗色模式",
+    "themeDark": "切换为亮色模式",
+    "selectLanguage": "选择语言"
+  },
+  "hero": {
+    "badge": "100% 客户端运行 • 零服务器依赖 • 极致隐私安全",
+    "title": "智能 Git Clone 命令生成器",
+    "titleHighlight": "& 子文件夹即时下载",
+    "subtitle": "粘贴任意 GitHub 仓库链接、深层子文件夹网址或 org/repo 简写，即刻生成终端命令链，或直接将单目录打包下载为 ZIP。"
+  },
+  "input": {
+    "label": "GitHub 仓库或文件夹网址",
+    "placeholder": "粘贴 GitHub 链接、子目录网址或简写（如 facebook/react, vercel/next.js/tree/canary/examples）...",
+    "clear": "清空输入",
+    "paste": "粘贴",
+    "samplesLabel": "快速示例：",
+    "invalidUrl": "请输入有效的 GitHub 网址、深层子目录路径或 org/repo 简写。",
+    "orgDetected": "检测到组织或用户名：已自动展开为 GitHub Pages 个人主页仓库。",
+    "subfolderDetected": "检测到深层子文件夹！您可以在下方直接将其打包下载为 ZIP 压缩包。"
+  },
+  "options": {
+    "protocolLabel": "协议",
+    "flagsLabel": "命令参数",
+    "shallow": "浅克隆 (--depth 1)",
+    "shallowTip": "仅下载最新提交，节省带宽和磁盘空间",
+    "packageManager": "包管理器",
+    "branchOption": "包含分支 (-b)",
+    "branchTip": "显式检出 URL 中指定的特定分支"
+  },
+  "commands": {
+    "heading": "即用型终端命令链",
+    "subheading": "点击任意卡片或「复制」按钮，快速将完整命令复制至剪贴板。",
+    "cloneEnter": {
+      "title": "克隆并进入目录",
+      "desc": "克隆代码仓库并立即通过 cd 进入新项目目录。"
+    },
+    "cloneCode": {
+      "title": "克隆并在 VS Code 中打开",
+      "desc": "克隆仓库、进入目录并一键启动 Visual Studio Code 编辑器。"
+    },
+    "cloneDev": {
+      "title": "克隆、安装依赖并启动 Dev",
+      "desc": "克隆、进入目录、安装依赖包并启动本地开发服务。"
+    },
+    "ghPages": {
+      "title": "GitHub Pages 专属快速克隆",
+      "desc": "克隆用户或组织的 GitHub Pages 根站点代码仓库。"
+    },
+    "sparseCheckout": {
+      "title": "Git Sparse-Checkout（原生稀疏检出）",
+      "desc": "利用 Git 原生稀疏检出特性，仅将此特定子目录下载至本地。"
+    },
+    "copy": "复制",
+    "copied": "已复制！"
+  },
+  "downloader": {
+    "badge": "已识别子目录",
+    "title": "将文件夹打包下载为 ZIP",
+    "desc": "直接在浏览器内获取该文件夹中的所有文件，无需完整克隆动辄数 GB 的大型 Monorepo 仓库。",
+    "subfolderPath": "目标路径",
+    "branch": "分支",
+    "button": "下载子目录 ZIP 压缩包",
+    "fetchingTree": "正在扫描目录结构...",
+    "fetchingFiles": "正在下载文件 ({current}/{total})...",
+    "zipping": "正在生成 ZIP 压缩包...",
+    "done": "下载已完成！",
+    "failed": "下载失败，请检查文件夹是否存在或是否达到 API 限额。",
+    "rateLimitNotice": "GitHub API 匿名访问限额为 60 次/小时。如需更高额度可填写可选 Token。",
+    "tokenToggle": "GitHub Token（可选）",
+    "tokenPlaceholder": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "tokenSave": "保存 Token",
+    "tokenSaved": "已保存在本地浏览器",
+    "tokenHelp": "具有公共仓库读取权限的个人访问令牌。仅存储在您的浏览器 localStorage 中。"
+  },
+  "history": {
+    "title": "最近访问的仓库",
+    "empty": "暂无历史记录。请在上方粘贴链接体验！",
+    "clear": "清空历史",
+    "reopen": "载入此仓库"
+  },
+  "features": {
+    "title": "为什么开发者青睐 CloneLink",
+    "subtitle": "告别繁琐的终端命令输入，不再为了一个小组件或示例目录克隆整个庞大仓库。",
+    "f1Title": "零服务器延迟 & 100% 隐私安全",
+    "f1Desc": "所有逻辑均在浏览器本地执行。无后端代理，无日志记录，更不会追踪您的仓库数据。",
+    "f2Title": "智能深层 URL 解析",
+    "f2Desc": "无缝兼容简写（user/repo）、标准网址、SSH 链接以及深层分支子目录（tree/branch/subfolder）。",
+    "f3Title": "浏览器内存即时生成 ZIP",
+    "f3Desc": "通过 JSZip 直接在浏览器内存中解构并打包子目录，一键触发原生文件下载。",
+    "f4Title": "多协议支持与主流包管理器",
+    "f4Desc": "自由切换 HTTPS、SSH 与 GitHub CLI 协议，并支持 npm、pnpm、yarn 及 bun 运行命令。"
+  },
+  "faq": {
+    "title": "常见问题解答 (FAQ)",
+    "q1": "CloneLink 是如何在不克隆仓库的情况下下载 GitHub 子目录的？",
+    "a1": "CloneLink 通过调用 GitHub 开放 REST API 获取指定目录的文件树与内容，并在浏览器端异步下载文件，利用 JSZip 在内存中打包成 .zip 压缩包供您即时下载。",
+    "q2": "我的私有代码或 GitHub Token 会泄露吗？",
+    "a2": "绝对不会。CloneLink 是托管在 GitHub Pages 上的静态纯前端应用，没有后端服务器。所有数据及可选 Token 均仅保存在您本地浏览器的 localStorage 中，请求直接发往 api.github.com。",
+    "q3": "支持哪些格式的 GitHub 网址？",
+    "a3": "支持标准 HTTPS 链接、SSH 链接、简写格式（user/repo）、单个组织名（自动映射为 user/user.github.io）以及深层目录链接（tree/branch/subfolder）。",
+    "q4": "浅克隆（Shallow Clone）与稀疏检出（Sparse-Checkout）有何区别？",
+    "a4": "浅克隆（--depth 1）仅下载整个仓库的最新一次提交历史；而稀疏检出则通过 Git 配置让本地磁盘仅拉取和解压您指定的特定子目录。",
+    "q5": "遇到 GitHub API 速率限制（Rate Limit）怎么办？",
+    "a5": "未认证 IP 访问 GitHub API 每小时上限为 60 次。您可以创建免费的 Personal Access Token 并填入可选输入框，额度将立即提升至 5,000 次/小时。"
+  },
+  "footer": {
+    "tagline": "极简至臻、100% 客户端运行的 Git 克隆加速与目录下载利器。",
+    "creator": "由 Kishara Dilshan 倾心打造。",
+    "supportCta": "请作者喝杯咖啡",
+    "githubCta": "GitHub 开源代码",
+    "privacy": "零跟踪 • 纯前端客户端 • 开源"
+  }
+}

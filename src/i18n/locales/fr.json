@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "CloneLink | Générateur Intelligent de Commandes Git Clone & Téléchargeur de Sous-dossiers",
+    "description": "Générez des commandes de terminal enchaînées (clone + cd + VS Code/npm) et téléchargez des sous-dossiers GitHub en ZIP directement dans votre navigateur. 100% côté client.",
+    "keywords": "générateur commande git clone, télécharger sous dossier github en ligne, outil clone github, git clone et cd, sparse checkout github"
+  },
+  "nav": {
+    "support": "Soutenir le Développeur",
+    "supportShort": "Soutenir",
+    "supportTooltip": "Offrez-moi un café sur Buy Me a Coffee",
+    "themeLight": "Passer en Mode Sombre",
+    "themeDark": "Passer en Mode Clair",
+    "selectLanguage": "Choisir la Langue"
+  },
+  "hero": {
+    "badge": "100% Côté Client • Zéro Dépendance Serveur • Confidentialité Totale",
+    "title": "Générateur Intelligent Git Clone",
+    "titleHighlight": "& Téléchargeur de Dossiers",
+    "subtitle": "Collez une URL GitHub, un lien de sous-dossier ou un raccourci d'organisation pour générer instantanément des chaînes de commandes et télécharger en ZIP."
+  },
+  "input": {
+    "label": "URL du Répertoire ou Dossier GitHub",
+    "placeholder": "Collez l'URL GitHub, le sous-dossier ou le raccourci (ex. facebook/react, vercel/next.js/tree/canary/examples)...",
+    "clear": "Effacer l'entrée",
+    "paste": "Coller",
+    "samplesLabel": "Exemples rapides :",
+    "invalidUrl": "Veuillez entrer une URL GitHub valide, un chemin de dossier ou un raccourci org/repo.",
+    "orgDetected": "Organisation détectée : Déploiement automatique vers le dépôt GitHub Pages.",
+    "subfolderDetected": "Sous-dossier détecté ! Vous pouvez télécharger ce répertoire sous forme d'archive ZIP ci-dessous."
+  },
+  "options": {
+    "protocolLabel": "Protocole",
+    "flagsLabel": "Options de Commande",
+    "shallow": "Clone Peu Profond (--depth 1)",
+    "shallowTip": "Télécharge uniquement le dernier commit pour économiser la bande passante et l'espace disque",
+    "packageManager": "Gestionnaire de Paquets",
+    "branchOption": "Inclure la Branche (-b)",
+    "branchTip": "Effectuer un checkout explicite de la branche indiquée dans le lien"
+  },
+  "commands": {
+    "heading": "Chaînes de Commandes Immédiates",
+    "subheading": "Cliquez sur une carte ou utilisez le bouton Copier pour copier la commande.",
+    "cloneEnter": {
+      "title": "Cloner et Entrer dans le Dossier",
+      "desc": "Clone le dépôt et s'y déplace immédiatement avec cd."
+    },
+    "cloneCode": {
+      "title": "Cloner et Ouvrir dans VS Code",
+      "desc": "Clone le dépôt, y accède et l'ouvre dans Visual Studio Code."
+    },
+    "cloneDev": {
+      "title": "Cloner, Installer et Lancer Dev",
+      "desc": "Clone, accède au dossier, installe les dépendances et démarre le serveur de développement."
+    },
+    "ghPages": {
+      "title": "Clone Rapide GitHub Pages",
+      "desc": "Clone le dépôt racine GitHub Pages de l'utilisateur ou de l'organisation."
+    },
+    "sparseCheckout": {
+      "title": "Git Sparse-Checkout (Natif)",
+      "desc": "Utilise le sparse-checkout natif de Git pour ne cloner que ce sous-dossier précis."
+    },
+    "copy": "Copier",
+    "copied": "Copié !"
+  },
+  "downloader": {
+    "badge": "Sous-dossier Détecté",
+    "title": "Télécharger le Dossier en ZIP",
+    "desc": "Récupérez uniquement les fichiers de ce dossier directement dans votre navigateur sans cloner tout le dépôt.",
+    "subfolderPath": "Chemin Cible",
+    "branch": "Branche",
+    "button": "Télécharger le ZIP du Dossier",
+    "fetchingTree": "Analyse de l'arborescence...",
+    "fetchingFiles": "Téléchargement des fichiers ({current}/{total})...",
+    "zipping": "Création de l'archive ZIP...",
+    "done": "Téléchargement terminé !",
+    "failed": "Échec du téléchargement. Vérifiez la limite d'API ou l'existence du dossier.",
+    "rateLimitNotice": "L'API GitHub autorise 60 requêtes anonymes/heure. Besoin de plus ? Ajoutez un token facultatif.",
+    "tokenToggle": "Token GitHub (Optionnel)",
+    "tokenPlaceholder": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "tokenSave": "Enregistrer le Token",
+    "tokenSaved": "Token Enregistré dans le Navigateur",
+    "tokenHelp": "Jeton d'accès personnel avec lecture des dépôts publics. Stocké uniquement dans votre localStorage."
+  },
+  "history": {
+    "title": "Dépôts Récents",
+    "empty": "Aucun dépôt récent. Collez un lien ci-dessus pour commencer !",
+    "clear": "Effacer l'historique",
+    "reopen": "Charger le dépôt"
+  },
+  "features": {
+    "title": "Pourquoi les Développeurs Utilisent CloneLink",
+    "subtitle": "Arrêtez de taper des commandes répétitives et de cloner d'immenses monorepos pour un seul sous-dossier.",
+    "f1Title": "Zéro Latence Serveur & 100% Privé",
+    "f1Desc": "Tout s'exécute directement dans votre navigateur. Aucun serveur relais, aucun journal, aucun pistage.",
+    "f2Title": "Analyse Intelligente des Liens Profonds",
+    "f2Desc": "Prend en charge les raccourcis (user/repo), les URLs complètes, les liens SSH ou les branches imbriquées.",
+    "f3Title": "Génération de ZIP en Mémoire Navigateur",
+    "f3Desc": "Extrait et archive les sous-répertoires au format ZIP via JSZip directement dans la mémoire de votre navigateur.",
+    "f4Title": "Multi-Protocoles & Gestionnaires de Paquets",
+    "f4Desc": "Basculez instantanément entre HTTPS, SSH et GitHub CLI, ainsi qu'entre npm, pnpm, yarn et bun."
+  },
+  "faq": {
+    "title": "Foire Aux Questions (FAQ)",
+    "q1": "Comment CloneLink télécharge-t-il des sous-dossiers GitHub sans cloner ?",
+    "a1": "CloneLink interroge l'API REST publique de GitHub pour lister les fichiers du dossier cible. Il télécharge les contenus bruts de manière asynchrone et les compresse dans un fichier .zip via JSZip directement dans votre navigateur.",
+    "q2": "Mes données ou tokens sont-ils exposés ?",
+    "a2": "Non. CloneLink est une application statique hébergée sur GitHub Pages sans backend. Tout token optionnel reste stocké dans votre navigateur et communique uniquement avec api.github.com.",
+    "q3": "Quels formats d'URL sont pris en charge ?",
+    "a3": "Les URLs HTTPS standard, les URLs SSH, les raccourcis user/repo, les organisations uniques et les liens profonds de dossiers (tree/branch/subfolder).",
+    "q4": "Quelle est la différence entre shallow clone et sparse-checkout ?",
+    "a4": "Un clone superficiel (--depth 1) ne télécharge que le dernier commit de l'ensemble du dépôt. Un sparse-checkout configure Git pour ne télécharger sur votre disque que les dossiers spécifiés.",
+    "q5": "Que faire si j'atteins la limite de requêtes de l'API GitHub ?",
+    "a5": "GitHub limite les requêtes non authentifiées à 60/heure. Vous pouvez générer un Personal Access Token gratuit et le renseigner dans le champ optionnel pour monter à 5 000 requêtes/heure."
+  },
+  "footer": {
+    "tagline": "L'accélérateur Git et téléchargeur de dossiers ultra-minimaliste 100% côté client.",
+    "creator": "Conçu avec passion par Kishara Dilshan.",
+    "supportCta": "Offrez-moi un Café",
+    "githubCta": "Dépôt GitHub",
+    "privacy": "Zéro Pistage • 100% Côté Client • Open Source"
+  }
+}
