@@ -7,7 +7,7 @@
   "nav": {
     "support": "Soutenir le Développeur",
     "supportShort": "Soutenir",
-    "supportTooltip": "Offrez-moi un café sur Buy Me a Coffee",
+    "supportTooltip": "Soutenez le développeur sur Ko-fi",
     "themeLight": "Passer en Mode Sombre",
     "themeDark": "Passer en Mode Clair",
     "selectLanguage": "Choisir la Langue"
@@ -116,7 +116,7 @@
   "footer": {
     "tagline": "L'accélérateur Git et téléchargeur de dossiers ultra-minimaliste 100% côté client.",
     "creator": "Conçu avec passion par Kishara Dilshan.",
-    "supportCta": "Offrez-moi un Café",
+    "supportCta": "Soutenir sur Ko-fi",
     "githubCta": "Dépôt GitHub",
     "privacy": "Zéro Pistage • 100% Côté Client • Open Source"
   }

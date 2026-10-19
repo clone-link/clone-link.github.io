@@ -7,7 +7,7 @@
   "nav": {
     "support": "支持开发者",
     "supportShort": "支持",
-    "supportTooltip": "在 Buy Me a Coffee 上请作者喝杯咖啡",
+    "supportTooltip": "在 Ko-fi 上支持开发者",
     "themeLight": "切换为暗色模式",
     "themeDark": "切换为亮色模式",
     "selectLanguage": "选择语言"
@@ -116,7 +116,7 @@
   "footer": {
     "tagline": "极简至臻、100% 客户端运行的 Git 克隆加速与目录下载利器。",
     "creator": "由 Kishara Dilshan 倾心打造。",
-    "supportCta": "请作者喝杯咖啡",
+    "supportCta": "在 Ko-fi 上支持",
     "githubCta": "GitHub 开源代码",
     "privacy": "零跟踪 • 纯前端客户端 • 开源"
   }

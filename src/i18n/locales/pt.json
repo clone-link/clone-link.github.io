@@ -7,7 +7,7 @@
   "nav": {
     "support": "Apoiar Desenvolvedor",
     "supportShort": "Apoiar",
-    "supportTooltip": "Pague-me um café no Buy Me a Coffee",
+    "supportTooltip": "Apoie o desenvolvedor no Ko-fi",
     "themeLight": "Mudar para Modo Escuro",
     "themeDark": "Mudar para Modo Claro",
     "selectLanguage": "Selecionar Idioma"
@@ -116,7 +116,7 @@
   "footer": {
     "tagline": "O acelerador de Git e baixador de diretórios ultra-minimalista 100% client-side.",
     "creator": "Criado com carinho por Kishara Dilshan.",
-    "supportCta": "Buy Me a Coffee",
+    "supportCta": "Apoiar no Ko-fi",
     "githubCta": "Repositório GitHub",
     "privacy": "Sem Rastreamento • 100% Lado do Cliente • Código Aberto"
   }

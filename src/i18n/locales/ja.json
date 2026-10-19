@@ -7,7 +7,7 @@
   "nav": {
     "support": "開発者を支援",
     "supportShort": "支援",
-    "supportTooltip": "Buy Me a Coffee で開発者を応援",
+    "supportTooltip": "Ko-fi で開発者を支援",
     "themeLight": "ダークモードに切り替え",
     "themeDark": "ライトモードに切り替え",
     "selectLanguage": "言語を選択"
@@ -116,7 +116,7 @@
   "footer": {
     "tagline": "極限までシンプルさを追求した、100% クライアントサイドの Git クローン加速 & フォルダダウンローダー。",
     "creator": "Created by Kishara Dilshan.",
-    "supportCta": "開発者を支援 (Buy Me a Coffee)",
+    "supportCta": "開発者を支援 (Ko-fi)",
     "githubCta": "GitHub リポジトリ",
     "privacy": "トラッキングゼロ • 100% クライアントサイド • オープンソース"
   }

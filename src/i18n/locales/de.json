@@ -7,7 +7,7 @@
   "nav": {
     "support": "Entwickler Unterstützen",
     "supportShort": "Spenden",
-    "supportTooltip": "Spendieren Sie einen Kaffee auf Buy Me a Coffee",
+    "supportTooltip": "Entwickler auf Ko-fi unterstützen",
     "themeLight": "Zu Dunkelmodus wechseln",
     "themeDark": "Zu Hellmodus wechseln",
     "selectLanguage": "Sprache wählen"
@@ -116,7 +116,7 @@
   "footer": {
     "tagline": "Das ultra-minimale, 100% clientseitige Git-Beschleuniger- und Verzeichnis-Download-Tool.",
     "creator": "Entwickelt mit Leidenschaft von Kishara Dilshan.",
-    "supportCta": "Kaffee spendieren",
+    "supportCta": "Auf Ko-fi unterstützen",
     "githubCta": "GitHub Repository",
     "privacy": "Kein Tracking • 100% Clientseitig • Open Source"
   }

@@ -7,7 +7,7 @@
   "nav": {
     "support": "Apoyar al Desarrollador",
     "supportShort": "Apoyar",
-    "supportTooltip": "Invítame a un café en Buy Me a Coffee",
+    "supportTooltip": "Apoya al desarrollador en Ko-fi",
     "themeLight": "Cambiar a Modo Oscuro",
     "themeDark": "Cambiar a Modo Claro",
     "selectLanguage": "Seleccionar Idioma"
@@ -116,7 +116,7 @@
   "footer": {
     "tagline": "El acelerador de Git y descargador de subcarpetas ultra-minimalista 100% del lado del cliente.",
     "creator": "Creado con pasión por Kishara Dilshan.",
-    "supportCta": "Invítame a un Café",
+    "supportCta": "Apoyar en Ko-fi",
     "githubCta": "Repositorio GitHub",
     "privacy": "Cero Rastreo • 100% Lado del Cliente • Código Abierto"
   }

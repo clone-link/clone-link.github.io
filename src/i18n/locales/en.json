@@ -7,7 +7,7 @@
   "nav": {
     "support": "Support Developer",
     "supportShort": "Support",
-    "supportTooltip": "Support developer on Buy Me a Coffee",
+    "supportTooltip": "Support developer on Ko-fi",
     "themeLight": "Switch to Dark Mode",
     "themeDark": "Switch to Light Mode",
     "selectLanguage": "Select Language"
@@ -116,7 +116,7 @@
   "footer": {
     "tagline": "The ultra-minimal, 100% client-side Git clone accelerator & directory downloader.",
     "creator": "Built with passion by Kishara Dilshan.",
-    "supportCta": "Buy Me a Coffee",
+    "supportCta": "Support on Ko-fi",
     "githubCta": "GitHub Repository",
     "privacy": "Zero Tracking • 100% Client-Side • Open Source"
   }

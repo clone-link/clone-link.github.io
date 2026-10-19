@@ -21,7 +21,7 @@
     <a href="https://clone-link.github.io"><img src="https://img.shields.io/badge/Production-clone--link.github.io-4F46E5?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Site" /></a>
     <a href="https://github.com/clone-link/clone-link.github.io/actions/workflows/deploy.yml"><img src="https://img.shields.io/github/actions/workflow/status/clone-link/clone-link.github.io/deploy.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Status" /></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge" alt="MIT License" /></a>
-    <a href="https://buymeacoffee.com/kisharadilz"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Support Developer" /></a>
+    <a href="https://ko-fi.com/kishara"><img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Support on Ko-fi" /></a>
   </p>
 
   <p align="center">
@@ -227,12 +227,12 @@ clone-link.github.io/
 If CloneLink saves you time in your daily development workflow, consider supporting its maintenance and development:
 
 <p align="left">
-  <a href="https://buymeacoffee.com/kisharadilz" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50" style="border-radius: 8px;" />
+  <a href="https://ko-fi.com/kishara" target="_blank">
+    <img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" alt="Support on Ko-fi" height="48" style="border-radius: 8px;" />
   </a>
 </p>
 
-Created with passion by **[Kishara Dilshan](https://buymeacoffee.com/kisharadilz)**.
+Created with passion by **[Kishara Dilshan](https://ko-fi.com/kishara)**.
 
 ---
 
